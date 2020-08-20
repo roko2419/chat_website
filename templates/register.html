@@ -1,10 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}HEED {% endblock %}
+{% block content %}
+
+
+
+    <h1>CREAT HEED ACCOUNT!!</h1>
+
+    <form class="container p-3 my-3 border" action="#" method="post">
+        <h2>HEED Registration!</h2>
+      <div class="form-group">
+        <label>NAME</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter Your Name">
+        <label>Username</label>
+        <input type="text" class="form-control" name="username" placeholder="Enter Username">
+        <label>Password</label>
+        <input type="password" class="form-control" name="t_password" placeholder="2ezwsp6c91@12">
+        <label>re-enter Password</label>
+        <input type="password" class="form-control" name="password" placeholder="re-enter password">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" placeholder="example@test.com">
+      </div>
+         <button class="btn btn-primary" type="submit">Create Account</button>
+    </form>
+
+    <div class="container">
+        <a href="/login">already have an account</a>
+    </div>
+
+{% endblock %}

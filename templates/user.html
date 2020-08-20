@@ -1,10 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}HEED {% endblock %}
+{% block content %}
+
+
+<div class="container">
+     <h1 style="color: ghostwhite" >WELCOME USER!! 😊 {{usr}}</h1>
+</div>
+<div class="container">
+<div class="col-6">
+
+    <div class="input-group mb-3 ">
+      <div class="input-group-append">
+          <p id="disappear"><button class="btn btn-success"  type="submit" id="join_chat" name="join_chat">JOIN CHAT</button></p>
+      </div>
+    </div>
+
+    <div class="container">
+         <div class="overflow-auto" style=" height:300px; background-color: aliceblue; ">
+            <p id="display" style="color: ghostwhite"></p>
+        </div>
+    </div>
+
+    <form action="#" method="post">
+
+        <div class="input-group mb-3" id="text">
+            <input type="text" id="send_msg" name="send_msg" class="form-control" placeholder="type here.." aria-label="type here..">
+          <div class="input-group-append">
+            <button class="btn-primary" type="submit" id="send" name="send" >SEND</button>
+          </div>
+        </div>
+        <div id="exit_button"></div>
+    </form>
+
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{url_for('static', filename='user.js')}}"></script>
+
+{% endblock %}
