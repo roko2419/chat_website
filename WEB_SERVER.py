@@ -174,6 +174,7 @@ def get_messages():
 
 
 if __name__ == "__main__":
+    DataBase.create_all()
     heed.run(debug=True)  # running heed
 
 
